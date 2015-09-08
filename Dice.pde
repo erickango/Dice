@@ -23,7 +23,7 @@ class Die //models one single dice cube
 {
 	//variable declarations here
 	int myX, myY, number;
-	Die(int x, int y) //constructor
+	Die(int x, int y) 
 	{
 		myX = x;
 		myY = y;
@@ -31,7 +31,7 @@ class Die //models one single dice cube
 	}
 	int roll()
 	{
-		(int) (Math.random() * 6) + 1;
+		return (int)(Math.random() * 6) + 1;
 		//your code here
 	}
 	void show()
@@ -39,10 +39,32 @@ class Die //models one single dice cube
 		stroke(3);
 		fill(255);
 		rect(myX, myY, 50,50);
-		if(number = 1) ellipse(myX + 25, myY + 25, 10,10);
-		else if(number = 2){
-			ellipse(myX+15, myY+50, 10,10);
-			ellispe(myX + 35, myY + 25, 10,10);
+		if(number == 1) ellipse(myX + 25, myY + 25, 10,10);
+		else if(number == 2){
+			ellipse(myX+15, myY+15, 10,10);
+			ellipse(myX+35, myY+35, 10,10);
+		} else if(number == 3){
+			ellipse(myX+15, myY+15, 10,10);
+			ellipse(myX+35, myY+35, 10,10);
+			ellipse(myX+25, myY+25, 10, 10);
+		} else if(number == 4){
+			ellipse(myX+15, myY+15, 10, 10);
+			ellipse(myX+35, myY+15, 10, 10);
+			ellipse(myX+15, myY+35, 10, 10);
+			ellipse(myX+35, myY+35, 10, 10);
+		} else if(number == 5){
+			ellipse(myX+10, myY+10, 10, 10);
+			ellipse(myX+40, myY+10, 10, 10);
+			ellipse(myX+10, myY+40, 10, 10);
+			ellipse(myX+40, myY+40, 10, 10);
+			ellipse(myX+25, myY+25, 10, 10);
+		} else if(number == 6){
+			int i, s;
+			for(s = 10; s<50; s+=15){
+				for(i = 15; i<50; i+=20){
+					ellipse(myX+i, myY+s, 10,10);
+				}
+			}
 		}
 		//your code here
 	}
