@@ -23,11 +23,12 @@ class Die //models one single dice cube
 {
 	//variable declarations here
 	int myX, myY, number;
-	Die(int x, int y) 
+	Die(int x, int y)
 	{
 		myX = x;
 		myY = y;
 		number = roll();
+
 	}
 	int roll()
 	{
@@ -37,8 +38,9 @@ class Die //models one single dice cube
 	void show()
 	{
 		stroke(3);
-		fill(255);
+		fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
 		rect(myX, myY, 50,50);
+		fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
 		if(number == 1) ellipse(myX + 25, myY + 25, 10,10);
 		else if(number == 2){
 			ellipse(myX+15, myY+15, 10,10);
