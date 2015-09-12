@@ -7,13 +7,16 @@ void setup()
 void draw()
 {
 	background(0);
-	int i, s;
+	int i, s, sumofDices;
+	sumofDices = 0;
 	for(s = 12; s<400; s += 65){
 		for(i = 12; i<400; i+=65){
 			Die bob = new Die(i,s);
 			bob.show();
+			sumofDices+=Die.number;
 		}
 	}
+	text(sumofDices, 0, 0);
 }
 void mousePressed()
 {
